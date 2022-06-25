@@ -8,13 +8,13 @@ const express = require('express')
 const app = express()
 const port = 3000;
 app.use(cors({
-  origin: ["http://localhost:8080", "https://oneline.surge.sh"],
+  origin: ["http://localhost:8080", "https://oneline.onrender.com"],
   optionsSuccessStatus: 200
 }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.get('/', (req, res) => {
-  res.end(`Hey, don't come here, go here https://oneline.surge.sh`);
+  res.end(`Hey, don't come here, go here https://oneline.onrender.com/`);
 });
 app.post('/group/update/avatar', (req, res) => {
   const chatId = req.body.id;
